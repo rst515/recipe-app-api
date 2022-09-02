@@ -7,6 +7,7 @@ from django.utils.translation import gettext_lazy as _
 
 from core import models
 
+
 # custom admin for users
 class UserAdmin(BaseUserAdmin):
     """Define the admin pages for users."""
@@ -17,7 +18,7 @@ class UserAdmin(BaseUserAdmin):
         (
             _('Permissions'),
             {
-                'fields':(
+                'fields': (
                     'is_active',
                     'is_staff',
                     'is_superuser'
@@ -41,5 +42,6 @@ class UserAdmin(BaseUserAdmin):
             }
         }),
     )
+
 
 admin.site.register(models.User, UserAdmin)
